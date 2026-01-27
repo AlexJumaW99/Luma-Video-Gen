@@ -1,0 +1,5 @@
+"Camera motion: Smooth 360-degree orbit around the subject. The camera circles the subject while maintaining a centered focus.
+
+Subject: A hyper-realistic Pharaoh standing in a frozen, statue-like pose. The subject is completely motionless and still, exhibiting no movement, breathing, or blinking. He is wearing a Nemes crown and full royal golden regalia.
+
+Environment: The vast Sahara desert with endless sand dunes. Three large pyramids are visible in the distant horizon. The lighting is cinematic and photorealistic, rendered in the style of Unreal Engine 5 with high fidelity."
