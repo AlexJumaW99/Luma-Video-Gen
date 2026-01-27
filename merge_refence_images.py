@@ -6,14 +6,13 @@ from dotenv import load_dotenv
 from lumaai import LumaAI
 
 # --- Configuration ---
-# 1. Setup Paths
+# 1. Setup Paths (for .env and Output only)
 current_script_dir = Path(__file__).resolve().parent
 project_root = current_script_dir.parent
-ref_images_dir = project_root / "reference_images"
 output_dir = project_root / "merged_reference_images"
 env_path = project_root / "env" / ".env"
 
-# Ensure output directory exists
+# Ensure output directory exists to save the result
 output_dir.mkdir(parents=True, exist_ok=True)
 
 # 2. Load Environment Variables
@@ -30,15 +29,9 @@ if not api_key:
 client = LumaAI(auth_token=api_key)
 
 # --- INPUTS ---
-# NOTE: While your files are stored locally in 'reference_images', 
-# Luma's API requires PUBLIC URLs to process them.
-# Replace these strings with the actual hosted links (e.g., Imgur/Dropbox/S3).
+# Replace these with your actual hosted URLs
 face_image_url = "https://your-public-url.com/face.png"
 pose_image_url = "https://your-public-url.com/pose.png"
-
-# Verify local files exist (sanity check)
-if not (ref_images_dir / "face.png").exists() or not (ref_images_dir / "pose.png").exists():
-    print("Warning: face.png or pose.png not found in local 'reference_images' folder.")
 
 # --- THE PROMPT ---
 # Derived from your prompt.txt, but optimized for a STILL image (removed camera motion)
