@@ -30,17 +30,15 @@ client = LumaAI(auth_token=api_key)
 
 # --- INPUTS ---
 # Replace these with your actual hosted URLs
-face_image_url = "https://your-public-url.com/face.png"
-pose_image_url = "https://your-public-url.com/pose.png"
+face_image_url = "https://i.postimg.cc/Y2WQSFtw/face.png"
+pose_image_url = "https://i.postimg.cc/449p3cX4/pose.png"
 
 # --- THE PROMPT ---
 # Derived from your prompt.txt, but optimized for a STILL image (removed camera motion)
 image_prompt = (
     "Subject: A hyper-realistic Pharaoh standing in a frozen, statue-like pose. "
-    "The subject is completely motionless and still. "
     "He is wearing a Nemes crown and full royal golden regalia. "
     "Environment: The vast Sahara desert with endless sand dunes. "
-    "Three large pyramids are visible in the distant horizon. "
     "Style: The lighting is cinematic and photorealistic, rendered in the style of Unreal Engine 5 with high fidelity."
 )
 
