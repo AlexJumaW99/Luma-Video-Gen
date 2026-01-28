@@ -24,3 +24,12 @@ video_prompt = (
     "Environment: Vast Sahara desert, sand dunes, three pyramids visible in the distance. "
     "Style: Photorealistic, Unreal Engine 5, 8k resolution, cinematic lighting."
 )
+
+video_prompt_v2 = (
+    "A cinematic 360-degree orbit shot moving smoothly around a hyper-realistic Pharaoh, "
+    "who stands completely motionless in a frozen, statue-like pose. "
+    "He is adorned in a Nemes crown and majestic golden royal regalia that glimmers in the sun. "
+    "The setting is the vast Sahara desert with rolling sand dunes and three ancient pyramids "
+    "rising in the distance. The lighting is photorealistic and dramatic, "
+    "evoking the high-fidelity style of an 8k Unreal Engine 5 render with a timeless, historical atmosphere."
+)

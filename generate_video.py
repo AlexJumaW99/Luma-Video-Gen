@@ -1,4 +1,5 @@
 import os
+import sys
 from pathlib import Path
 from dotenv import load_dotenv
 from lumaai import LumaAI
@@ -61,9 +62,10 @@ try:
         aspect_ratio="16:9",
         
         # 'loop' forces the start and end to match, creating a perfect orbit
-        # since loop does not support keyframes however, we will change it to False for now
+        # since loop does not support start and end (multiple) keyframes however, we will change it to False for now
+        # it does not support multiple keyframes because loop=True implies start and end frame are the same
         # remember, we can always loop using CapCut
-        loop=True, 
+        loop=False, 
         prompt=video_prompt,
         resolution="1080p",
         duration="9s",
@@ -86,6 +88,7 @@ try:
 
 except Exception as e:
     print(f"An error occurred during generation: {e}")
+    sys.exit(1) # Stop the script here so you don't get errors later for trying to check the status of a non-existent generated video
     
 
 # 5. Check the status of the video generation
@@ -102,6 +105,7 @@ try:
         
 except Exception as e:
     print(f"An error occurred during periodic status checks: {e}")
+    sys.exit(1) # Stop the script here so you don't get errors later for trying to download a non-existent generated video
     
     
 # 6. Download completed video generation
