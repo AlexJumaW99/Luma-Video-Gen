@@ -3,3 +3,24 @@
 Subject: A hyper-realistic Pharaoh standing in a frozen, statue-like pose. The subject is completely motionless and still, exhibiting no movement, breathing, or blinking. He is wearing a Nemes crown and full royal golden regalia.
 
 Environment: The vast Sahara desert with endless sand dunes. Three large pyramids are visible in the distant horizon. The lighting is cinematic and photorealistic, rendered in the style of Unreal Engine 5 with high fidelity."
+
+
+
+image_prompt = (
+    "Subject: A full-body wide shot of a hyper-realistic Pharaoh standing in a statue-like pose. "
+    "He is turned at a three-quarter angle, facing Southeast (looking diagonally towards the camera's right). "
+    "The subject is perfectly centered with his entire figure visible from head to toe. "
+    "He is wearing a Nemes crown and full royal golden regalia. "
+    "Environment: The vast Sahara desert with endless sand dunes. "
+    "Style: Shallow depth of field with a soft background blur (bokeh) to isolate the subject. "
+    "Cinematic photorealistic lighting, rendered in the style of Unreal Engine 5, 8k resolution."
+)
+
+video_prompt = (
+    "Camera motion: Smooth 360-degree orbit around the subject. "
+    "Subject: A hyper-realistic Pharaoh standing in a frozen, statue-like pose. "
+    "The subject is completely motionless and still, exhibiting no movement. "
+    "Wearing a Nemes crown and full royal golden regalia. "
+    "Environment: Vast Sahara desert, sand dunes, three pyramids visible in the distance. "
+    "Style: Photorealistic, Unreal Engine 5, 8k resolution, cinematic lighting."
+)
