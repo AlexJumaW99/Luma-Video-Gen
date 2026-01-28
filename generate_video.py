@@ -45,14 +45,26 @@ client = LumaAI(auth_token=api_key)
 
 start_image_url = "https://i.postimg.cc/FHrY4dP5/awesome-pharaoh.png"
 end_image_url = "https://i.postimg.cc/yxxLtYwp/awesome-pharaoh-backside.png"
+my_image = "https://i.postimg.cc/ZK81NjrM/alexander16-9.png"
+
+
+# video_prompt = (
+#     """
+#     A bronze Pharaoh statue, Photorealistic Unreal Engine 5 animation style.
+#     Orbit left quickly and smoothly along the circumference of a circle until one revolution is complete.
+#     The facial and bodily features of the bronze statue should look consistent throughout the video as the camera orbits. 
+#     """
+# )
 
 video_prompt = (
-    "Camera motion: Smooth 360-degree orbit around the subject centered in the frame. "
-    "Subject: A hyper-realistic Pharaoh standing in a frozen, statue-like pose."
-    "The subject is completely motionless and still. "
-    "The subject is wearing a Nemes crown and full royal golden regalia."
-    "Background: the background is a vast desert that is blurred using a bokeh effect, ensuring the subject is always the main focus."
-    "Style: Photorealistic, Unreal Engine 5, 8k resolution, cinematic lighting."
+    "Subject: A hyper-realistic Bronze Pharaoh Statue."
+    "The Pharaoh Statue must remain at the center of each frame throughout the video."
+    "The Pharaoh Statue must remain motionless and maintain the same pose throughout the video."
+    "The Pharaoh Statue must remain in full view, from head to toe, throughout the video."
+    "From the very first frame, the facial and bodily features of the Pharaoh MUST look consistent throughout the video as the camera orbits."
+    "Camera motion: The camera should track the Pharaoh Statue as it orbits right quickly and smoothly around it."
+    "Video Background: The statue is in the middle of a wooden circular podium, and there is no other object in the video."
+    "Art Style: Photorealistic, Unreal Engine 5 animation style."
 )
 
 
@@ -74,10 +86,7 @@ try:
         duration="5s",
         concepts=[
             {
-                "key": "orbit_left"
-            },
-            {
-                "key": "eye_level" 
+                "key": "orbit_right"
             },
         ],
         
@@ -85,7 +94,7 @@ try:
         keyframes={
             "frame0": {
                 "type": "image",
-                "url": start_image_url
+                "url": my_image
             },
             # "frame1": {
             #     "type": "image",
