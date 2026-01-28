@@ -75,3 +75,13 @@ veo_prompt = (
     Like the attached photo, the high-fidelity art style of the Pharaoh in the video should look like an 8k Unreal Engine 5 render with a timeless, 
     historical atmosphere. The background surrounding the Pharaoh in the video, should also be plain white."
 )
+
+
+video_prompt_v4 = (
+    "The video starts with a man's face centered in the frame."
+    "The camera zooms out until the entire body of the man from head to toe, is revealed." 
+    "The man is wearing a plain "
+    "The setting is the vast Sahara desert with rolling sand dunes."
+    "As the camera orbits behind the subject, it creates a dramatic reveal of an ancient pyramid rising in the far distance. "
+    "The lighting is photorealistic and dramatic, evoking the high-fidelity style of an 8k Unreal Engine 5 render with a timeless, historical atmosphere."
+)
