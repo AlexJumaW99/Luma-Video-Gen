@@ -63,12 +63,12 @@ try:
         duration="9s",
         
         #the keyframes parameter allows users to enter images to use as reference in video generation, add or omit as needed. 
-        keyframes={
-            "frame0": {
-                "type": "image",
-                "url": "pose_image_url"
-            }
-        }
+        # keyframes={
+        #     "frame0": {
+        #         "type": "image",
+        #         "url": "pose_image_url"
+        #     }
+        # }
     )
     
     print(f"Generation started successfully! ID: {generation.id}")

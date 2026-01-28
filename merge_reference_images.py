@@ -6,25 +6,28 @@ from dotenv import load_dotenv
 from lumaai import LumaAI
 
 # --- Configuration ---
-# 1. Setup Paths (for .env and Output only)
+# 1. Setup Paths
+# We use the current script directory as the base, just like list_allowed_concepts.py
 current_script_dir = Path(__file__).resolve().parent
-project_root = current_script_dir.parent
-output_dir = project_root / "merged_reference_images"
-env_path = project_root / "env" / ".env"
+output_dir = current_script_dir / "merged_reference_images"
+env_path = current_script_dir / "env" / ".env"
 
 # Ensure output directory exists to save the result
 output_dir.mkdir(parents=True, exist_ok=True)
 
 # 2. Load Environment Variables
+# Using the same logic that worked in your reference file
 if env_path.exists():
     load_dotenv(dotenv_path=env_path)
 else:
+    # Fallback: Just try loading without a path (searches CWD) or print explicit warning
     print(f"Warning: .env file not found at {env_path}")
+    load_dotenv() 
 
 # 3. Initialize Client
-api_key = os.environ.get("LUMA_API_KEY") or os.environ.get("LUMAAI_API_KEY")
+api_key = os.getenv("LUMA_API_KEY")
 if not api_key:
-    raise ValueError("API Key not found in environment variables.")
+    raise ValueError(f"API Key not found. Checked path: {env_path}")
 
 client = LumaAI(auth_token=api_key)
 
