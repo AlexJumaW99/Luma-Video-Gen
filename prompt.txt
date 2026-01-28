@@ -16,6 +16,7 @@ image_prompt = (
     "Cinematic photorealistic lighting, rendered in the style of Unreal Engine 5, 8k resolution."
 )
 
+# This is the best one so far!
 video_prompt = (
     "Camera motion: Smooth 360-degree orbit around the subject. "
     "Subject: A hyper-realistic Pharaoh standing in a frozen, statue-like pose. "
@@ -31,5 +32,25 @@ video_prompt_v2 = (
     "He is adorned in a Nemes crown and majestic golden royal regalia that glimmers in the sun. "
     "The setting is the vast Sahara desert with rolling sand dunes and three ancient pyramids "
     "rising in the distance. The lighting is photorealistic and dramatic, "
+    "evoking the high-fidelity style of an 8k Unreal Engine 5 render with a timeless, historical atmosphere."
+)
+
+video_prompt_v3 = (
+    "A cinematic eye_level 360-degree orbit_left shot moving smoothly around a hyper-realistic Pharaoh, "
+    "who stands completely motionless in a frozen, statue-like pose. "
+    "He is adorned in a Nemes crown and majestic golden royal regalia that glimmers in the sun. "
+    "The setting is the vast Sahara desert with rolling sand dunes."
+    "As the camera orbits behind the subject, it creates a dramatic reveal of an ancient pyramid rising in the far distance. "
+    "The lighting is photorealistic and dramatic, "
+    "evoking the high-fidelity style of an 8k Unreal Engine 5 render with a timeless, historical atmosphere."
+)
+
+video_prompt_v4 = (
+    "A cinematic eye_level 360-degree orbit_left shot revolving smoothly around a hyper-realistic Pharaoh, "
+    "who stands completely motionless in a frozen, statue-like pose. "
+    "He is adorned in a Nemes crown and majestic golden royal regalia that glimmers in the sun. "
+    "The setting is the vast Sahara desert with rolling sand dunes."
+    "As the camera orbits behind the subject, it creates a dramatic reveal of an ancient pyramid rising in the far distance. "
+    "The lighting is photorealistic and dramatic, "
     "evoking the high-fidelity style of an 8k Unreal Engine 5 render with a timeless, historical atmosphere."
 )

@@ -47,7 +47,7 @@ start_image_url = "https://i.postimg.cc/FHrY4dP5/awesome-pharaoh.png"
 end_image_url = "https://i.postimg.cc/yxxLtYwp/awesome-pharaoh-backside.png"
 
 video_prompt = (
-    "Camera motion: Smooth eye_level 360-degree orbit_left around the subject. "
+    "Camera motion: Smooth 360-degree orbit around the subject. "
     "Subject: A hyper-realistic Pharaoh standing in a frozen, statue-like pose. "
     "The subject is completely motionless and still, exhibiting no movement. "
     "Wearing a Nemes crown and full royal golden regalia. "
@@ -68,10 +68,18 @@ try:
         # since loop does not support start and end (multiple) keyframes however, we will change it to False for now
         # it does not support multiple keyframes because loop=True implies start and end frame are the same
         # remember, we can always loop using CapCut
-        loop=False, 
+        loop=True, 
         prompt=video_prompt,
         resolution="1080p",
-        duration="30s",
+        duration="9s",
+        concepts=[
+            {
+                "key": "orbit_left"
+            },
+            {
+                "key": "eye_level" 
+            }
+        ],
         
         #the keyframes parameter allows users to enter images to use as reference in video generation, add or omit as needed. 
         keyframes={
@@ -79,11 +87,10 @@ try:
                 "type": "image",
                 "url": start_image_url
             },
-            "frame1": {
-                "type": "image",
-                "url": end_image_url
-                
-            }
+            # "frame1": {
+            #     "type": "image",
+            #     "url": end_image_url   
+            # }
         }
     )
     
