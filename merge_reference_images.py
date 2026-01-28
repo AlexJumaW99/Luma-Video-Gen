@@ -35,11 +35,18 @@ pose_image_url = "https://i.postimg.cc/449p3cX4/pose.png"
 
 # --- THE PROMPT ---
 # Derived from your prompt.txt, but optimized for a STILL image (removed camera motion)
+# Changes made:
+# 1. Added "Three-quarter angle" and "facing Southeast" to rotate the subject.
+# 2. Added "Full body wide shot" and "centered" to ensure visibility.
+# 3. Added "Depth of field" and "bokeh" for background blur.
 image_prompt = (
-    "Subject: A hyper-realistic Pharaoh standing in a frozen, statue-like pose. "
+    "Subject: A full-body wide shot of a hyper-realistic Pharaoh standing in a statue-like pose. "
+    "He is turned at a three-quarter angle, facing Southeast (looking diagonally towards the camera's right). "
+    "The subject is perfectly centered with his entire figure visible from head to toe. "
     "He is wearing a Nemes crown and full royal golden regalia. "
     "Environment: The vast Sahara desert with endless sand dunes. "
-    "Style: The lighting is cinematic and photorealistic, rendered in the style of Unreal Engine 5 with high fidelity."
+    "Style: Shallow depth of field with a soft background blur (bokeh) to isolate the subject. "
+    "Cinematic photorealistic lighting, rendered in the style of Unreal Engine 5, 8k resolution."
 )
 
 def bake_character_image():
@@ -53,7 +60,9 @@ def bake_character_image():
         generation = client.generations.image.create(
             prompt=image_prompt,
             model="photon-1",
-            aspect_ratio="16:9", 
+            
+            # CHANGED: Switched to 9:16 (Portrait) to fit the "Full Body" better
+            aspect_ratio="9:16",            
             
             # Character Reference: Locks the facial identity
             character_ref={
@@ -63,11 +72,15 @@ def bake_character_image():
             },
             
             # Image Reference: Locks the composition/structure (the pose)
-            # We use a high weight (0.85) to force the pose to match closely
+            # BEFORE: We use a high weight (0.85) to force the pose to match closely
+            
+            # AFTER: Lowered weight from 0.85 to 0.45.
+            # High weight locks the angle to the input image. 
+            # Lower weight allows the text prompt ("facing Southeast") to take effect.            
             image_ref=[
                 {
                     "url": pose_image_url,
-                    "weight": 0.85
+                    "weight": 0.45
                 }
             ]
         )
