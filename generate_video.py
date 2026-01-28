@@ -63,7 +63,6 @@ video_prompt = (
     "The Pharaoh Statue must remain in full view, from head to toe, throughout the video."
     "From the very first frame, the facial and bodily features of the Pharaoh MUST look consistent throughout the video as the camera orbits."
     "Camera motion: The camera should track the Pharaoh Statue as it orbits right quickly and smoothly around it."
-    "Video Background: The statue is in the middle of a wooden circular podium, and there is no other object in the video."
     "Art Style: Photorealistic, Unreal Engine 5 animation style."
 )
 
