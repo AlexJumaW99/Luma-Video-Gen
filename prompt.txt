@@ -54,3 +54,24 @@ video_prompt_v4 = (
     "The lighting is photorealistic and dramatic, "
     "evoking the high-fidelity style of an 8k Unreal Engine 5 render with a timeless, historical atmosphere."
 )
+
+veo_prompt = (
+    Imagine you are the camera (or perspective) through which I am seeing the attached image. 
+    The perpendicular distance between you and the subject (pharaoh) in the photo is the radius of the circle. 
+    Now move along the circumference of the circle, until you are on the opposite side. 
+    You should now be viewing the same pharaoh from the opposite side (you are viewing him from the back). 
+    From this new perspective (camera position), the pharaoh should still be centred in the image, 
+    in the same pose as the attached generated image, and the art style should be exactly the same. 
+    But he should now be facing away from us.  
+
+    With this in mind use the attached image, to generate for me the following video:
+ 
+    "A cinematic, eye level, 360-degree orbit shot (moving towards the left direction). 
+    Revolving smoothly around the Pharaoh, who stands completely motionless in a frozen, 
+    statue-like pose. After the revolution (camera orbit), 
+    the user should have seen the Pharaoh from every direction 
+    (frontal-view, side-views, rear-view, diagonal-views). 
+    The lighting throughout the video should be photorealistic and dramatic. 
+    Like the attached photo, the high-fidelity art style of the Pharaoh in the video should look like an 8k Unreal Engine 5 render with a timeless, 
+    historical atmosphere. The background surrounding the Pharaoh in the video, should also be plain white."
+)

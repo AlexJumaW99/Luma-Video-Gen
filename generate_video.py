@@ -47,11 +47,11 @@ start_image_url = "https://i.postimg.cc/FHrY4dP5/awesome-pharaoh.png"
 end_image_url = "https://i.postimg.cc/yxxLtYwp/awesome-pharaoh-backside.png"
 
 video_prompt = (
-    "Camera motion: Smooth 360-degree orbit around the subject. "
-    "Subject: A hyper-realistic Pharaoh standing in a frozen, statue-like pose. "
-    "The subject is completely motionless and still, exhibiting no movement. "
-    "Wearing a Nemes crown and full royal golden regalia. "
-    "Environment: Vast Sahara desert, sand dunes, three pyramids visible in the distance. "
+    "Camera motion: Smooth 360-degree orbit around the subject centered in the frame. "
+    "Subject: A hyper-realistic Pharaoh standing in a frozen, statue-like pose."
+    "The subject is completely motionless and still. "
+    "The subject is wearing a Nemes crown and full royal golden regalia."
+    "Background: the background is a vast desert that is blurred using a bokeh effect, ensuring the subject is always the main focus."
     "Style: Photorealistic, Unreal Engine 5, 8k resolution, cinematic lighting."
 )
 
@@ -68,17 +68,17 @@ try:
         # since loop does not support start and end (multiple) keyframes however, we will change it to False for now
         # it does not support multiple keyframes because loop=True implies start and end frame are the same
         # remember, we can always loop using CapCut
-        loop=True, 
+        loop=False, 
         prompt=video_prompt,
         resolution="1080p",
-        duration="9s",
+        duration="5s",
         concepts=[
             {
                 "key": "orbit_left"
             },
             {
                 "key": "eye_level" 
-            }
+            },
         ],
         
         #the keyframes parameter allows users to enter images to use as reference in video generation, add or omit as needed. 
