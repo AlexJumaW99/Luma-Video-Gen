@@ -43,6 +43,9 @@ client = LumaAI(auth_token=api_key)
 # have start and end keyframes so not needed for now
 # pose_image_url = "https://i.postimg.cc/FHrY4dP5/awesome-pharaoh.png"
 
+start_image_url = "https://i.postimg.cc/FHrY4dP5/awesome-pharaoh.png"
+end_image_url = "https://i.postimg.cc/yxxLtYwp/awesome-pharaoh-backside.png"
+
 video_prompt = (
     "Camera motion: Smooth eye_level 360-degree orbit_left around the subject. "
     "Subject: A hyper-realistic Pharaoh standing in a frozen, statue-like pose. "
@@ -68,17 +71,17 @@ try:
         loop=False, 
         prompt=video_prompt,
         resolution="1080p",
-        duration="9s",
+        duration="30s",
         
         #the keyframes parameter allows users to enter images to use as reference in video generation, add or omit as needed. 
         keyframes={
             "frame0": {
                 "type": "image",
-                "url": "https://i.postimg.cc/FHrY4dP5/awesome-pharaoh.png"
+                "url": start_image_url
             },
             "frame1": {
                 "type": "image",
-                "url": "https://i.postimg.cc/yxxLtYwp/awesome-pharaoh-backside.png"
+                "url": end_image_url
                 
             }
         }
