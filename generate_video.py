@@ -46,6 +46,7 @@ client = LumaAI(auth_token=api_key)
 start_image_url = "https://i.postimg.cc/FHrY4dP5/awesome-pharaoh.png"
 end_image_url = "https://i.postimg.cc/yxxLtYwp/awesome-pharaoh-backside.png"
 my_image = "https://i.postimg.cc/ZK81NjrM/alexander16-9.png"
+my_image_flipped = "https://i.postimg.cc/Kz5Vszsf/alexander-pharaoh-flipped.png"
 
 
 # video_prompt = (
@@ -61,6 +62,7 @@ video_prompt = (
     "The Pharaoh Statue must remain at the center of each frame throughout the video."
     "The Pharaoh Statue must remain motionless and maintain the same pose throughout the video."
     "The Pharaoh Statue must remain in full view, from head to toe, throughout the video."
+    "The Pharaoh Statue must be the only object in the video."
     "From the very first frame, the facial and bodily features of the Pharaoh MUST look consistent throughout the video as the camera orbits."
     "Camera motion: The camera should track the Pharaoh Statue as it orbits right quickly and smoothly around it."
     "Art Style: Photorealistic, Unreal Engine 5 animation style."
@@ -93,7 +95,7 @@ try:
         keyframes={
             "frame0": {
                 "type": "image",
-                "url": my_image
+                "url": my_image_flipped
             },
             # "frame1": {
             #     "type": "image",
