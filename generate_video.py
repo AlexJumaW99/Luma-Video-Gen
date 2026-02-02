@@ -58,14 +58,7 @@ my_image_flipped = "https://i.postimg.cc/Kz5Vszsf/alexander-pharaoh-flipped.png"
 # )
 
 video_prompt = (
-    "Subject: A hyper-realistic Bronze Pharaoh Statue."
-    "The Pharaoh Statue must remain at the center of each frame throughout the video."
-    "The Pharaoh Statue must remain motionless and maintain the same pose throughout the video."
-    "The Pharaoh Statue must remain in full view, from head to toe, throughout the video."
-    "The Pharaoh Statue must be the only object in the video."
-    "From the very first frame, the facial and bodily features of the Pharaoh MUST look consistent throughout the video as the camera orbits."
-    "Camera motion: The camera should track the Pharaoh Statue as it orbits right quickly and smoothly around it."
-    "Art Style: Photorealistic, Unreal Engine 5 animation style."
+    "Massive ocean leviathan obliterates a warship in the frozen North Sea."
 )
 
 
@@ -83,25 +76,12 @@ try:
         # remember, we can always loop using CapCut
         loop=False, 
         prompt=video_prompt,
-        resolution="1080p",
-        duration="5s",
-        concepts=[
-            {
-                "key": "orbit_right"
-            },
-        ],
+        resolution="4k",
+        duration="9s",
+           
         
         #the keyframes parameter allows users to enter images to use as reference in video generation, add or omit as needed. 
-        keyframes={
-            "frame0": {
-                "type": "image",
-                "url": my_image_flipped
-            },
-            # "frame1": {
-            #     "type": "image",
-            #     "url": end_image_url   
-            # }
-        }
+         
     )
     
     print(f"Generation started successfully! ID: {generation.id}")
